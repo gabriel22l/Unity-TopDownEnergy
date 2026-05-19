@@ -76,20 +76,17 @@ The codebase emphasizes high cohesion and loose coupling, using event-driven com
 - **Component-Based Architecture**: Separation of concerns (Movement, Input, Animation, etc.)
 
 ## Screenshots
-
-### Inventory 
-![Inventory](Images/InvGif2.gif)
+### Inventory
+<img src="Images/InvGif2.gif" width="500">
 
 ### Gameplay
-![Gameplay](Images/Screenshot_1.png)
-
-![Gameplay](Images/ScreenShot_4.png)
+<img src="Images/Screenshot_1.png" width="600"> <img src="Images/ScreenShot_4.png" width="600">
 
 ### Building Interface
-![Build UI](Images/Screenshot_3.png)
+<img src="Images/Screenshot_3.png" width="600">
 
-### Energy UI
-![Energy](Images/Screenshot_5.png)
+### Energy System
+<img src="Images/Screenshot_5.png" width="600">
 
 ## Future Improvements
 
