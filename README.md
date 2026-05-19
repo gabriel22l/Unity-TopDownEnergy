@@ -1,7 +1,7 @@
 # Unity-TopDownEnergy
 
-A top-down base building and energy management game developed in Unity 6000.3.8f1 as a 4-week university project.
-Unity top-down survival/management prototype featuring inventory system, energy grid (solar, battery, consumers), day/night cycle, and modular base building.
+A top-down prototype developed in Unity 6000.3.8f1 as a 4-week university project.
+Features include an inventory system, energy grid (solar, battery, consumers), day/night cycle, and modular base building.
 
 Players collect resources, construct renewable energy infrastructure, and manage power generation and consumption to keep their base operational.
 
