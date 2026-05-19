@@ -80,13 +80,13 @@ The codebase emphasizes high cohesion and loose coupling, using event-driven com
 <img src="Images/InvGif2.gif" width="500">
 
 ### Gameplay
-<img src="Images/Screenshot_1.png" width="600"> <img src="Images/ScreenShot_4.png" width="600">
+<img src="Images/Screenshot_1.png" width="500"> <img src="Images/ScreenShot_4.png" width="500">
 
 ### Building Interface
-<img src="Images/Screenshot_3.png" width="600">
+<img src="Images/Screenshot_3.png" width="500">
 
 ### Energy System
-<img src="Images/Screenshot_5.png" width="600">
+<img src="Images/Screenshot_5.png" width="500">
 
 ## Future Improvements
 
