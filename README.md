@@ -85,7 +85,7 @@ The codebase emphasizes high cohesion and loose coupling, using event-driven com
 ### Building Interface
 <img src="Images/Screenshot_3.png" width="500">
 
-### Energy System
+### Energy Interface
 <img src="Images/Screenshot_5.png" width="500">
 
 ## Future Improvements
