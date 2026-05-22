@@ -71,7 +71,7 @@ The project is currently a gameplay prototype focused on core systems and archit
 
 The codebase emphasizes high cohesion and loose coupling, using event-driven communication to reduce direct dependencies between systems.
 
-- **Observer Pattern**: Structural states, inventory changes, and energy deltas emit events. UI elements subscribe to these streams, ensuring zero direct dependencies from logic to presentation.
+- **Observer Pattern**: Structural states, inventory changes, and energy deltas emit events. UI elements subscribe to these streams, reducing direct dependencies from logic to presentation.
 - **Data-Driven Design (ScriptableObjects)**: Item properties, structural configurations, and construction costs are encapsulated in configuration assets, allowing for rapid balancing without modifying code.
 - **Component-Based Architecture**: Separation of concerns (Movement, Input, Animation, etc.)
 
