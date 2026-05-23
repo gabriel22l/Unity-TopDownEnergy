@@ -10,10 +10,12 @@ Players collect resources, construct renewable energy infrastructure, and manage
 - [Project Overview](#project-overview)
 - [Current State](#current-state)
 - [Features](#features)
-- [Architecture & Systems](#architecture--systems)
-- [Screenshots & Demo](#screenshots)
+- [Systems](#systems)
+- [Screenshots](#screenshots)
 - [Future Improvements](#future-improvements)
 - [What I Learned](#what-i-learned)
+- [Technology Stack](#technology-stack)
+- [Credits](#credits)
 
 ## Project Overview
 
@@ -34,7 +36,7 @@ The project is currently a gameplay prototype focused on core systems and archit
 - **Player Interaction System**: Interactive base terminals and object interaction feedback
 - **UI Management**: Real-time inventory and energy status displays
 
-## Architecture & Systems
+## Systems
 
 ### Core Systems
 
@@ -110,6 +112,27 @@ The codebase emphasizes high cohesion and loose coupling, using event-driven com
 
 ---
 
-**Author**: Gabriel  
-**Engine**: Unity 6  
+## Technology Stack
+
+- Unity 6 (6000.3.8f1)
+- C#
+- Universal Render Pipeline (URP)
+- Unity Input System
+- Cinemachine
+- TextMeshPro
+
+---
+
+## Credits
+
+### Programming & Systems Design
+- Gabriel Guzmán
+
+### Pixel Art & Sprites
+- Cynthia Pérez
+
+### Third-Party Assets
+- pixel-boy (itch.io, CC0)
+
+---
 **Development Time**: 4 weeks
