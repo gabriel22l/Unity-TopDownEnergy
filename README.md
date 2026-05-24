@@ -1,9 +1,9 @@
 # Unity-TopDownEnergy
 
 A top-down prototype developed in Unity 6000.3.8f1 as a 4-week university project.
-Features include an inventory system, energy grid (solar, battery, consumers), day/night cycle, and modular base building.
+Features include an inventory system, energy system (solar, battery, consumers), day/night cycle, and base building.
 
-Players collect resources, construct renewable energy infrastructure, and manage power generation and consumption to keep their base operational.
+Players collect resources, construct renewable energy structures, and maintain energy balance across their base.
 
 ## Table of Contents
 
@@ -19,63 +19,67 @@ Players collect resources, construct renewable energy infrastructure, and manage
 
 ## Project Overview
 
-**TopDownEnergy** is a 4-week university project designed to explore sustainable energy management through interactive gameplay. Players build and manage renewable energy infrastructure, gather resources, and optimize their base power grid to maintain energy stability.
-
+**TopDownEnergy** is a 4-week university project designed to explore sustainable energy management through interactive gameplay. Players gather resources, construct renewable energy structures, and plan their builds to maintain stability and keep the base powered through the night.
 
 ## Current State
 
-The project is currently a gameplay prototype focused on core systems and architecture rather than final art or content.
+The project is currently a gameplay prototype focused on core systems rather than final art or content.
 
 ## Features
 
-- **Energy Management System**: Dynamically track energy production, consumption, and storage across the base
-- **Resource Inventory**: Collect, manage, and spend resources for construction via drag-and-drop inventory mechanics
-- **Base Building**: Construct structures on designated slots with real-time validation of resources and energy costs
+- **Energy Management System**: Dynamically track energy production, consumption, and storage
+- **Resource Inventory**: Collect, manage, and spend resources for construction. Supports drag-and-drop item management
+- **Base Building**: Construct structures on designated slots with validation of resources and energy costs
 - **Renewable Energy Structures**: Place energy producers (solar panels, wind turbines) and storage facilities
 - **Energy Consumers**: Structures that consume energy while active
-- **Player Interaction System**: Interactive base terminals and object interaction feedback
-- **UI Management**: Real-time inventory and energy status displays
+- **Player Interaction System**: Interact with world objects, resource gathering and access terminals
+- **UI Management**: Inventory and energy status displays
 
 ## Systems
 
 ### Core Systems
 
+**Interaction System** (`Player/`)
+- Trigger-based detection of nearby interactables via `IInteractable`
+- Automatically targets the closest interactable in range
+- Visual feedback on the current target via sprite color shift
+- Exposes player systems to interactable objects through a shared `InteractionContext`
+
 **Energy Controller** (`BaseManagement/`)
-- Central hub for energy production, consumption, and storage
-- Tick-based energy simulation (1-second intervals by default)
-- Registers and manages all energy producers, consumers, and storage containers
+- Energy production, consumption, and storage
+- Interval-based energy simulation (1-second intervals by default)
+- Registers and manages all energy producers, consumers, and storage structures
 - Prevents energy overflow and handles insufficient power scenarios
 
 **Base Manager** (`BaseManagement/`)
 - Manages base slots (building positions) and structure placement
 - Validates building requirements (resources + energy costs)
 - Controls structure uniqueness constraints
-- Handles light post management for visual feedback
+- Binds to the player inventory on terminal access for building validation
+- Emits slot change events on successful builds
 
 **Inventory System** (`InventorySystem/`)
 - Slot-based inventory with drag-and-drop UI interaction
 - Item data managed via ScriptableObjects
 - Tracks resource quantities and validates availability for building
-- Interactable highlight system for world items
 
 **Player Controller** (`Player/`)
 - Character movement with input normalization
 - Facing direction tracking for animations
-- Interaction system 
 - Player-mounted light system for nighttime visibility
 
 **UI System** (`UI/`)
 - Inventory display synchronized with data model
-- Real-time energy status visualization
-- Menu management and state handling
+- Energy status visualization
+- Menu management
 
 ### Design Patterns
 
-The codebase emphasizes high cohesion and loose coupling, using event-driven communication to reduce direct dependencies between systems.
+Leverages event-driven communication to reduce direct dependencies between systems.
 
-- **Observer Pattern**: Structural states, inventory changes, and energy deltas emit events. UI elements subscribe to these streams, reducing direct dependencies from logic to presentation.
-- **Data-Driven Design (ScriptableObjects)**: Item properties, structural configurations, and construction costs are encapsulated in configuration assets, allowing for rapid balancing without modifying code.
-- **Component-Based Architecture**: Separation of concerns (Movement, Input, Animation, etc.)
+- **Observer Pattern**: Structural states, inventory changes, and energy updates emit events, which UI elements subscribe to, reducing direct dependencies from logic to presentation.
+- **Data-Driven Design (ScriptableObjects)**: Item properties, structural configurations, and construction costs are defined as assets, allowing for data changes without modifying code.
+- **Behavioral Composition**: Separation of concerns (Movement, Input, Animation, etc.), behavior is composed from focused, single-responsibility components.
 
 ## Screenshots
 ### Inventory
@@ -94,7 +98,7 @@ The codebase emphasizes high cohesion and loose coupling, using event-driven com
 
 - **Procedural Generation**: Randomize layouts for replayability
 - **Multiple Building Types**: More diverse energy consumers and producers
-- **Expanded Inventory**: Equipment upgrades, consumables
+- **Expanded Inventory**: Equipment, consumables
 - **Save/Load System**: Persistent gameplay state
 - **Environmental Feedback**: Weather effects impacting solar/wind production
 - **Tutorial System**: Guided introduction for new players
